@@ -1,4 +1,5 @@
 import { soma, mult } from './soma'
+import { api } from "../api"
 
 describe('soma', () => {
     it('deve somar 1 ao número informado', () => {

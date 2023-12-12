@@ -1,26 +1,22 @@
-import { HamburgerIcon } from "@chakra-ui/icons"
-import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu"
-import { IconButton } from "@chakra-ui/react"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Box } from "@chakra-ui/react"
 
 
 export const Header = () => {
     return (
-        <Menu>
-            <MenuButton
-            as={IconButton}
-            icon={<HamburgerIcon />}
-             />
-             <MenuList>
-                <MenuItem>
-                    menu item
-                </MenuItem>
-                <MenuItem>
-                    new menu item
-                </MenuItem>
-                <MenuItem>
-                    brand new menu item
-                </MenuItem>
-             </MenuList>
-        </Menu>
+        <Box bg='teal' h='6vh' color='white' padding='10px'>
+            <Breadcrumb separator='|'>
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='#'>About</BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
+                </BreadcrumbItem>
+            </Breadcrumb>
+        </Box>
     )
 }
